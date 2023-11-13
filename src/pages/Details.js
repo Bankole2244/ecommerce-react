@@ -11,7 +11,7 @@ function Details() {
 
   useEffect(() => {
 
-    axios.get(`https://fakestoreapi.com/products/${id}`)
+    axios.get(`https://api.escuelajs.co/api/v1/products/${id}`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err))
 
@@ -21,7 +21,7 @@ function Details() {
     <div className='d-flex container' >
       <div className='row'>
       <div className='col-md-6 ' >
-      <img src={product?.image} alt="" style={{width:"100%", height:"50%"}}/>
+      <img src={product?.images[0]} alt="" style={{width:"100%", height:"50%"}}/>
       </div>
       <div className='col-md-6'>
       <h1 className='Description'> {product?.tittle}</h1>

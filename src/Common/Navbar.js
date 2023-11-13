@@ -2,15 +2,13 @@ import React, {useState}from 'react'
 import { BiCart } from 'react-icons/bi'
 import {Link} from "react-router-dom"
 import {BsCartDash} from "react-icons/bs"
+import { UseSelector, useSelector } from 'react-redux'
 
 
 function Navbar() {
 
- const [total, setTotal] = useState(0)
-
- function change(){
-  setTotal(total + 1) 
- }
+const total = useSelector((state) =>state.cart.total)
+ 
 
 
   return (
@@ -34,8 +32,9 @@ function Navbar() {
                 <BsCartDash size={40}/>
                 </Link>
 
-                <button onClick={()=> change()}>Change</button>
+                
             </div>
+            
       </div>
     </nav>
     </div>

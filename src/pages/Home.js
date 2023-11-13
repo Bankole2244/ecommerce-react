@@ -13,8 +13,9 @@ function Home() {
 
     useEffect(()=>{
 
-      axios.get("https://fakestoreapi.com/products?limit=15")
+      axios.get("https://api.escuelajs.co/api/v1/products?offset=0&limit=10 ")
     .then((res) => setProducts(res.data))
+    .catch((err) => console.log(err))
 
     },[])
 

@@ -1,7 +1,7 @@
 /* home css */
 .banner{
   height: 50vh;
-  background:linear-gradient(to right, #5946e3,#5946e3,#1d4700);
+  background:linear-gradient(to right, #5946e3,#5946e3,#5946e4);
   display: flex;
   justify-content: center;
   align-items: center;
